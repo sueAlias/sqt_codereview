@@ -1,7 +1,5 @@
 <?php
-include_once "config.php";
 
-// Fetch events from the database
 $sql = "SELECT eventID, eventName FROM event";
 $result = $conn->query($sql);
 ?>

@@ -1,6 +1,4 @@
 <?php
-include_once "config.php";
-
 $matricNum = $_POST["matricNum"];
 $eventID = $_POST["eventID"];
 $date = $_POST["date"];
