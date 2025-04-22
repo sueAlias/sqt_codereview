@@ -7,7 +7,7 @@ $date = $_POST["date"];
 $status = $_POST["status"];
 
 $result = eventAttendance($conn, $matricNum , $eventID , $date, $status);
-echo $result;
+//echo $result;
 
 function eventAttendance($conn, $matricNum, $eventID, $date, $status) {
     // Check if all parameters are provided
