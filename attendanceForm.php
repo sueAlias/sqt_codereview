@@ -15,8 +15,8 @@ $result = $conn->query($sql);
 </head>
 <body>
 <div>
-		<h1>Event Management System</h1>
-	</div>	
+        <h1>Event Management System</h1>
+</div>
     <h2>Event Attendance Form</h2>
     <form action="attendanceProcess.php" method="POST">
         <!-- Event Selection -->

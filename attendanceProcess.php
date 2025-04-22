@@ -1,5 +1,5 @@
 <?php
-include_once("config.php");
+include "config.php";
 
 $matricNum = $_POST["matricNum"];
 $eventID = $_POST["eventID"];
@@ -7,7 +7,7 @@ $date = $_POST["date"];
 $status = $_POST["status"];
 
 $result = eventAttendance($conn, $matricNum , $eventID , $date, $status);
-//echo $result;
+
 
 function eventAttendance($conn, $matricNum, $eventID, $date, $status) {
     // Check if all parameters are provided
