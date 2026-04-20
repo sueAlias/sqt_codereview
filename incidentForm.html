@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfrasystem Service Hub - Defect Review</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="p-8">
+
+    <div class="max-w-5xl mx-auto bg-white shadow-sm border border-gray-100 rounded-sm min-h-screen p-10">
+
+        <div class="flex items-center gap-4 mb-4">
+            <div
+                class="w-12 h-12 bg-[#003366] flex items-center justify-center text-[6px] text-white font-bold p-1 text-center">
+                ENFRASYSTEM</div>
+            <h1 class="text-3xl font-bold text-[#003366]">Enfrasystem Service Hub</h1>
+        </div>
+
+        <div class="max-w-md">
+            <label for="requestType" class="block text-sm font-medium text-gray-600 mb-2">
+                Request Types
+            </label>
+
+            <div class="relative group">
+                <select name="requestType"
+                    class="block w-full px-4 py-3 text-gray-700 bg-white border-2 border-blue-500 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all cursor-pointer">
+                    <option selected>Incident</option>
+                    <option>Service Request</option>
+                    <option>Advisory Request</option>
+                </select>
+
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 border-t pt-8">
+            <h3 class="text-xl font-bold text-[#003366] mb-6">Request Details</h3>
+
+            <form action="incidentProcess.php" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 gap-4">
+                    <div>
+                        <label for="urgency" class="block text-sm font-semibold text-gray-700 mb-1">*Summary</label>
+                        <input type="text" name="summary" placeholder="Summary of the issue"
+                            class="w-full p-3 border border-gray-300 rounded focus:border-blue-500 outline-none">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="urgency" class="block text-sm font-semibold text-gray-700 mb-1">*Urgency</label>
+                            <select name="urgency" class="w-full p-3 border border-gray-300 rounded bg-white">
+                                <option>Please Select</option>
+                                <option>Critical - Business Stopped</option>
+                                <option>Medium - Significant Impact</option>
+                                <option>Low - Normal Work</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="contactPhone" class="block text-sm font-semibold text-gray-700 mb-1">*Contact
+                                Phone</label>
+                            <input type="text" id="contactPhone" name="contactPhone" value=""
+                                class="w-full p-3 border border-gray-300 rounded">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="detailedDescription" class="block text-sm font-semibold text-gray-700 mb-1">*Detailed
+                            Description</label>
+                        <textarea name="detailedDescription" id="detailedDescription" style="resize: none;" rows="2"
+                            placeholder="Tell us more..."
+                            class="w-full p-3 border border-gray-300 rounded focus:border-blue-500 outline-none"></textarea>
+                    </div>
+                </div>
+                <span class="text-xs text-black-500 font-bold">* Required field</span>
+                <div class="flex justify-end gap-3">
+                    <button type="button"
+                        class="px-6 py-2 border border-gray-300 rounded text-gray-600 hover:bg-gray-50">Cancel</button>
+                    <button type="submit"
+                        class="px-6 py-2 bg-[#003366] text-white rounded hover:bg-blue-900 transition-colors">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
