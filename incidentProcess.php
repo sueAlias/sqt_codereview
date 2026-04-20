@@ -2,7 +2,7 @@
 // Database Connection Configuration
 $host = "localhost";
 $user = "root";
-$pass = "";
+$pass = "XXX";
 $db   = "enfrasystem_db";
 
 // DEFECT 1: No error handling on connection
