@@ -31,4 +31,4 @@ function eventAttendance($conn, $matricNum, $eventID, $date, $status) {
     }
 }
 
-?>
+
