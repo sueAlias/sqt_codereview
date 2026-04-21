@@ -8,4 +8,3 @@ echo "<div style='color: red; padding: 20px; border: 1px solid red;'>
 
       // This is an unused comments
       $myname = "Sue Alias";
-      echo
